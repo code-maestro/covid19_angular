@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mikaelprofile-184a4": {
+      "hosting": {
+        "covid19": [
+          "mikaelprofile-184a4"
+        ]
+      }
+    }
+  }
+}

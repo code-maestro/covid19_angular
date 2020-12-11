@@ -1,0 +1,18 @@
+
+<ul>
+  <li *ngFor='let doc of myArray'>
+      {{doc.field}}
+  </li>
+</ul>
+
+<form [formGroup]="this.form">
+  <input
+    placeholder="New Value"
+    formControlName="newValue"
+    type="text"
+    class="input-field col s12"
+  />
+  <button (click)="onSubmit()">
+    Submit
+  </button>
+</form>
