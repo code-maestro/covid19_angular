@@ -1,0 +1,39 @@
+[debug] [2020-12-12T07:52:03.357Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T07:52:03.360Z] Command:       D:\mikael\nodejs\node.exe C:\Users\ATWIINE GILBERT\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2020-12-12T07:52:03.360Z] CLI Version:   8.17.0
+[debug] [2020-12-12T07:52:03.360Z] Platform:      win32
+[debug] [2020-12-12T07:52:03.360Z] Node Version:  v14.15.1
+[debug] [2020-12-12T07:52:03.362Z] Time:          Sat Dec 12 2020 10:52:03 GMT+0300 (East Africa Time)
+[debug] [2020-12-12T07:52:03.362Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T07:52:03.362Z] 
+[debug] [2020-12-12T07:52:03.372Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-12T07:52:03.373Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[warn] !  hub: emulator hub unable to start on port 4400, starting on 4401 instead. {"metadata":{"emulator":{"name":"hub"},"message":"emulator hub unable to start on port 4400, starting on 4401 instead."}}
+[debug] [2020-12-12T07:52:03.474Z] [hub] writing locator at C:\Users\ATWIIN~1\AppData\Local\Temp\hub-mikaelprofile-184a4.json
+[debug] [2020-12-12T07:52:03.522Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mikaelprofile-184a4/webApps/-/config  
+ 
+[debug] [2020-12-12T07:52:05.014Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 07:52:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[covid19]: Serving hosting files from: dist/covid19 {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/covid19\u001b[22m"}}
+[info] +  hosting[covid19]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] 
+┌──────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your apps. │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Other reserved ports: 4401
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:15 +0000] "GET / HTTP/1.1" 200 713 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:15 +0000] \"GET / HTTP/1.1\" 200 713 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:15 +0000] "GET /runtime.js HTTP/1.1" 200 6299 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:15 +0000] \"GET /runtime.js HTTP/1.1\" 200 6299 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:15 +0000] "GET /styles.css HTTP/1.1" 200 72185 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:15 +0000] \"GET /styles.css HTTP/1.1\" 200 72185 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:16 +0000] "GET /polyfills.js HTTP/1.1" 200 144692 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:16 +0000] \"GET /polyfills.js HTTP/1.1\" 200 144692 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:16 +0000] "GET /main.js HTTP/1.1" 200 61633 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:16 +0000] \"GET /main.js HTTP/1.1\" 200 61633 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:17 +0000] "GET /vendor.js HTTP/1.1" 200 3032239 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:17 +0000] \"GET /vendor.js HTTP/1.1\" 200 3032239 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [12/Dec/2020:07:52:17 +0000] "GET /favicon.ico HTTP/1.1" 200 948 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [12/Dec/2020:07:52:17 +0000] \"GET /favicon.ico HTTP/1.1\" 200 948 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\""}}

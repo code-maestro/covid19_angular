@@ -12,6 +12,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HomeComponent } from './home/home.component';
 
 import { ReactiveFormsModule } from "@angular/forms";
+import { BodyComponent } from './body/body.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
@@ -27,7 +28,8 @@ var firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
