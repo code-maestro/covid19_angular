@@ -5,9 +5,10 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule} from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
-  imports: [MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatGridListModule],
-  exports: [MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatGridListModule],
+  imports: [MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatGridListModule, MatChipsModule],
+  exports: [MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatGridListModule, MatChipsModule],
 })
 export class MyMaterialModule { }
