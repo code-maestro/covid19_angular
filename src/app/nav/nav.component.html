@@ -1,12 +1,14 @@
-<mat-sidenav-container  color="#000" class="sidenav-container" >
+<mat-sidenav-container class="sidenav-container" >
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar> Covid 19 stats </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/dash"> WORLD </a>
-      <a mat-list-item href="#"> EAST AFRICA </a>
-      <a mat-list-item href="#"> UGANDA </a>
-      <a mat-list-item href="#"> SOPs </a>
+      <a mat-list-item routerLink="/uganda" routerLinkActive="active"> UGANDA </a>
+      <a mat-list-item routerLink="/home" routerLinkActive="active"> EAST AFRICA </a>
+      <a mat-list-item routerLink="/dash" routerLinkActive="active"> WORLD </a>
+      <a mat-list-item routerLink="/moh_sops" routerLinkActive="active"> MOH SOPs </a>
+      <a mat-list-item routerLink="/shop" routerLinkActive="active"> SHOP PPEs </a>
+      <a mat-list-item routerLink="/dialog" routerLinkActive="active" class="last_item"> contact us </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,9 +26,9 @@
         <mat-icon>share</mat-icon>
       </button>
     </mat-toolbar>
-
+    
     <!-- Add Content Here -->
-    <app-dash></app-dash>
-
+    <!-- <app-uganda></app-uganda> -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

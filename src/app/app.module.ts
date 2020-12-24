@@ -1,32 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
+//Angular imports
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from "@angular/forms";
+import { LayoutModule } from '@angular/cdk/layout';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyMaterialModule } from './material';
-import { MatSliderModule } from '@angular/material/slider';
 
+// FireBase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
-//components
-import { HomeComponent } from './home/home.component';
-import { AppComponent } from './app.component';
-
-import { ReactiveFormsModule } from "@angular/forms";
-import { BodyComponent } from './body/body.component';
-import { NavComponent } from './nav/nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
+// Material
+import { MyMaterialModule } from './material';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { DashComponent } from './dash/dash.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+
+//components
+import { AppComponent } from './app.component';
 import { DataComponent } from './data/data.component';
+import { BodyComponent } from './body/body.component';
+import { NavComponent } from './nav/nav.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
@@ -42,10 +44,9 @@ var firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     BodyComponent,
     NavComponent,
-    DashComponent,
+    routingComponents,
     DataComponent
   ],
   imports: [
@@ -65,7 +66,8 @@ var firebaseConfig = {
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

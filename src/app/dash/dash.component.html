@@ -1,18 +1,20 @@
-<div class="grid-container">
+<div class="grid-container" color="dark">
   <mat-grid-list cols="2" rowHeight="300px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
         <mat-card-header>
-          <mat-card-title>
+          <mat-card-title class="dashboard-title" >
             {{card.title}}
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
+
           <div>
             <!-- <app-home></app-home> -->
-            <app-data></app-data>
-            <app-body></app-body>
+            <app-data></app-data>    
+            
           </div>
+          
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

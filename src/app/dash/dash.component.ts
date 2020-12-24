@@ -13,20 +13,14 @@ export class DashComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Europe', cols: 2, rows: 1 },
-          { title: 'Asia', cols: 2, rows: 1 },
-          { title: 'Africa', cols: 2, rows: 1 },
-          { title: 'America', cols: 2, rows: 1 },
-          { title: 'Australia', cols: 2, rows: 1 }
+          { title: 'Global Data', cols: 2, rows: 1 },
+          { title: 'Global Data', cols: 2, rows: 2}
         ];
       }
 
       return [
-        { title: 'Europe', cols: 2, rows: 1 },
-        { title: 'Asia', cols: 1, rows: 1 },
-        { title: 'Africa', cols: 1, rows: 2 },
-        { title: 'America', cols: 1, rows: 1 },
-        { title: 'Australia', cols: 2, rows: 1 },
+        { title: 'Global Data', cols: 2, rows: 1 },
+        { title: 'Global Data', cols: 2, rows: 2 }
       ];
     })
   );

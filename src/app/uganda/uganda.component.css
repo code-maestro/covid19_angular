@@ -1,0 +1,99 @@
+.grid_cards{
+  display: flex;
+  flex-direction: row;
+}
+
+.example-card {
+  background-color: #1d1d1d;
+  padding: 1em;
+  margin: 1em;
+  max-width: 430px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+mat-chip-list{
+  padding: 1em;
+  margin: 5px;
+}
+
+mat-chip{
+  padding: 1em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card {
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  margin: 0 3px 0;
+  padding: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+
+svg.material-icons {
+  height: 40px;
+  color: antiquewhite;
+  width: auto;
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+  fill: rgb(251, 251, 251);
+}
+
+
+.card.card-small {
+  height: 16px;
+  width: 168px;
+}
+
+span{
+align-self: center;
+text-align: center;
+}
+
+.real_numbers{
+  font-size: 4em;
+  text-align: center;
+}
+
+.sign{
+  color: antiquewhite;
+  margin: 5px;
+  font-size: 2.5em;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .grid_cards{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .grid_cards{
+    flex-direction: column;
+  }
+
+  .example-card {
+    margin: 1em;
+  }
+}
