@@ -8,7 +8,7 @@
       <a mat-list-item routerLink="/dash" routerLinkActive="active"> WORLD </a>
       <a mat-list-item routerLink="/moh_sops" routerLinkActive="active"> MOH SOPs </a>
       <a mat-list-item routerLink="/shop" routerLinkActive="active"> SHOP PPEs </a>
-      <a mat-list-item routerLink="/dialog" routerLinkActive="active" class="last_item"> contact us </a>
+      <a mat-list-item (click)="handleClick()" routerLinkActive="active"> contact us </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Give us Feedback</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup] = "myForm" >
+
+    Value: {{myForm.value | json}}
+  
+    <hr>
+    <br>
+
+    <mat-form-field>
+      <input matInput formControlName="names" placeholder="Enter your names">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="email" placeholder=" Enter your Email">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="phoneNumber" placeholder="Enter Phone Number">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="residence" placeholder="Enter Residence/Address">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="message" placeholder="Enter Message">
+    </mat-form-field>
+  
+  
+  </form>
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="warn" cdkFocusInitial (click)="clicked()" mat-dialog-close > SEND </button>
+</mat-dialog-actions>
+
+

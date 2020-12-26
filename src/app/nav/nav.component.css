@@ -14,6 +14,11 @@
 
 .mat-toolbar{
   background-color: #1d1d1d;
+  position: sticky;
+}
+
+mat-toolbar{
+  position: sticky;
 }
 
 .mat-toolbar.mat-primary {

@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { UgandaComponent } from './uganda/uganda.component';
 import { ShopComponent } from './shop/shop.component';
 import { MohSopsComponent } from './moh-sops/moh-sops.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 const routes: Routes = [
   {path: '', component:UgandaComponent},

@@ -13,22 +13,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 // Material
 import { MyMaterialModule } from './material';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatDialogModule } from '@angular/material/dialog';
 
 //components
 import { AppComponent } from './app.component';
 import { DataComponent } from './data/data.component';
 import { BodyComponent } from './body/body.component';
 import { NavComponent } from './nav/nav.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
@@ -47,27 +38,18 @@ var firebaseConfig = {
     BodyComponent,
     NavComponent,
     routingComponents,
-    DataComponent
+    DataComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MyMaterialModule,
-    MatSliderModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

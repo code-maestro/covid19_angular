@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-moh-sops',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MohSopsComponent implements OnInit {
 
-  constructor() { }
+  myForm!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.myForm = this.formBuilder.group({
+      names: '',
+      email: '',
+      phoneNumber: '',
+      residence: '',
+      message: ''
+     })
+
+     this.myForm.valueChanges.subscribe(console.log)
   }
 
 }

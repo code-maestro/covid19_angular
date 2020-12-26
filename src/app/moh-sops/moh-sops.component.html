@@ -1,1 +1,28 @@
-<p>moh-sops works!</p>
+<form [formGroup] = "myForm" >
+
+  Value: {{myForm.value | json}}
+
+  <hr>
+  
+  <mat-form-field>
+    <input matInput formControlName="names" placeholder="Enter your names">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput formControlName="email" placeholder=" Enter your Email">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput formControlName="phoneNumber" placeholder="Enter Phone Number">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput formControlName="residence" placeholder="Enter Residence/Address">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput formControlName="message" placeholder="Enter Message">
+  </mat-form-field>
+
+
+</form>
