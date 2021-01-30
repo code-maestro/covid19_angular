@@ -1,28 +1,26 @@
-<form [formGroup] = "myForm" >
+<!-- <h1>HTTP TRIALS</h1>
 
-  Value: {{myForm.value | json}}
+<button (click) = 'getPosts()' > GET </button>
 
-  <hr>
-  
-  <mat-form-field>
-    <input matInput formControlName="names" placeholder="Enter your names">
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input matInput formControlName="email" placeholder=" Enter your Email">
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input matInput formControlName="phoneNumber" placeholder="Enter Phone Number">
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input matInput formControlName="residence" placeholder="Enter Residence/Address">
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input matInput formControlName="message" placeholder="Enter Message">
-  </mat-form-field>
+<div *ngFor="let post of posts | async">
+
+  {{post | json}}
+
+</div> -->
 
 
-</form>
+<p>
+  <a (click)="loadFriends()">Load Friends</a>.
+</p>
+
+<ng-template [ngIf]="friends.length">
+  <h2>
+    You have {{ friends.length }} friends!
+  </h2>
+
+  <ul>
+    <li *ngFor="let friend of friends">
+      {{ friend }}
+    </li>
+  </ul>
+</ng-template>

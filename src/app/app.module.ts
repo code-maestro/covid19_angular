@@ -1,6 +1,5 @@
 //Angular imports
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from "@angular/forms";
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -20,6 +19,9 @@ import { DataComponent } from './data/data.component';
 import { BodyComponent } from './body/body.component';
 import { NavComponent } from './nav/nav.component';
 import { DialogComponent } from './dialog/dialog.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
@@ -50,8 +52,11 @@ var firebaseConfig = {
     AngularFirestoreModule,
     ReactiveFormsModule,
     LayoutModule,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
