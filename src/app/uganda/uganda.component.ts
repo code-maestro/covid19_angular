@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,  } from '@angular/core';
 
 @Component({
   selector: 'app-uganda',
   templateUrl: './uganda.component.html',
   styleUrls: ['./uganda.component.css']
 })
+
 export class UgandaComponent implements OnInit {
 
   deaths : String = "Total deaths from all over the country";
@@ -16,8 +17,8 @@ export class UgandaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-  }
+
 
 }

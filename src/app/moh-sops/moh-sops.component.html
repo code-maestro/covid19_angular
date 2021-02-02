@@ -9,14 +9,11 @@
 <button (click)="loadFriends()" > GET DATA </button>
 
 <ng-template [ngIf]="friends.length">
-  <h2>
-    You have {{ friends.length }} friends!
-  </h2>
 
   <ul>
     <li *ngFor="let friend of friends">
       {{ friend | json }}
     </li>
   </ul>
-  
+
 </ng-template>

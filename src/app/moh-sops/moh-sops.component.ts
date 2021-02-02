@@ -1,21 +1,20 @@
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 import { ApiClient } from "../ApiClient";
 
 import { Post } from '../posts';
-import { Observable } from 'rxjs'; 
 
 @Component({
   selector: 'app-moh-sops',
   templateUrl: './moh-sops.component.html',
   styleUrls: ['./moh-sops.component.css']
 })
+
 export class MohSopsComponent implements OnInit {
 
   readonly ROOT_URL = 'https://covid-19-data.p.rapidapi.com/country';
 
-  posts: any;
+	posts: any;
 
   ngOnInit(): void {
     this.loadFriends();
@@ -30,9 +29,8 @@ export class MohSopsComponent implements OnInit {
  
 		this.apiClient = apiClient;
 		this.friends = [];
-
 	}
- 
+
 	public async loadFriends() : Promise<void> {
  
 		try {

@@ -1,21 +1,10 @@
 
-<mat-chip-list aria-label="Fish selection">
-  <mat-chip color="accent" selected>
-    <span 
-      matBadge="+" 
-      matBadgeColor="warn"
-      matBadgeOverlap="false" 
-      matBadgeSize="medium">
-        120
-    </span>
-  </mat-chip>
-  <mat-chip color="accent" selected>
-    <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">109</span>
-  </mat-chip>
-  <mat-chip color="dark" selected>
-    <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">129</span>
-  </mat-chip>
-  <mat-chip color="accent" selected>
-    <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">12009</span>
-  </mat-chip>
-</mat-chip-list>
+<button (click)="loadFriends()" > GET DATA </button>
+
+<ng-template [ngIf]="friends.length">
+  <ul>
+    <li *ngFor="let friend of friends">
+      {{ friend.deaths }}
+    </li>
+  </ul>
+</ng-template>
