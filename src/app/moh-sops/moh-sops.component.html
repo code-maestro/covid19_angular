@@ -1,17 +1,12 @@
 <!-- <h1>HTTP TRIALS</h1>
 
-<button (click) = 'getPosts()' > GET </button>
-
 <div *ngFor="let post of posts | async">
 
   {{post | json}}
 
 </div> -->
 
-
-<p>
-  <a (click)="loadFriends()">Load Friends</a>.
-</p>
+<button (click)="loadFriends()" > GET DATA </button>
 
 <ng-template [ngIf]="friends.length">
   <h2>
@@ -20,7 +15,8 @@
 
   <ul>
     <li *ngFor="let friend of friends">
-      {{ friend }}
+      {{ friend | json }}
     </li>
   </ul>
+  
 </ng-template>

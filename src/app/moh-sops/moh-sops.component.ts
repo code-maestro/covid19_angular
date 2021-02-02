@@ -15,17 +15,10 @@ export class MohSopsComponent implements OnInit {
 
   readonly ROOT_URL = 'https://covid-19-data.p.rapidapi.com/country';
 
-  posts: any ;
-
-  // getPosts(){
-  //   let params = new HttpParams().set('name', 'uganda');
-  //   let headers = new HttpHeaders().set('x-rapidapi-key','cc23854be3msh80f7d131de623c6p14400djsnff7e1752faa6');
-  //   let header = new HttpHeaders().set('x-rapidapi-host','covid-19-data.p.rapidapi.com');
-  //   this.posts = this.http.get(this.ROOT_URL + {params, headers, header})
-  // }
+  posts: any;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.loadFriends();
   }
 
   public friends: Post[];
