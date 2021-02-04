@@ -10,4 +10,11 @@ export class ShopComponent {
 
   constructor() { }
 
+  message: string = "";
+
+  receiveNumbers($event: any){
+    this.message = $event;
+  }
+
+
 }

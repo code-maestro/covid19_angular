@@ -22,6 +22,7 @@ import { DialogComponent } from './dialog/dialog.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { DeathsComponent } from './deaths/deaths.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
@@ -41,7 +42,8 @@ var firebaseConfig = {
     NavComponent,
     routingComponents,
     DataComponent,
-    DialogComponent
+    DialogComponent,
+    DeathsComponent
   ],
   imports: [
     BrowserModule,
