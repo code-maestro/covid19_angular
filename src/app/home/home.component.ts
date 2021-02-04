@@ -7,6 +7,8 @@ import { FormControl, FormGroup } from "@angular/forms";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+
 export class HomeComponent implements OnInit {
 
   myArray: any[] = []
@@ -44,6 +46,5 @@ export class HomeComponent implements OnInit {
     .catch(e => {
         console.log(e);
     })
-}
-
+  }
 }

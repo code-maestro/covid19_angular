@@ -1,10 +1,5 @@
-
-<button (click)="loadFriends()" > GET DATA </button>
-
 <ng-template [ngIf]="friends.length">
-  <ul>
-    <li *ngFor="let friend of friends">
-      {{ friend.deaths }}
-    </li>
-  </ul>
+    <p *ngFor="let friend of friends">
+      {{ friend.confirmed }}
+    </p>
 </ng-template>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 
 import { ApiClient } from "../ApiClient";
 
@@ -9,6 +9,7 @@ import { Post } from '../posts';
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.css']
 })
+
 export class DataComponent {
 
   readonly ROOT_URL = 'https://covid-19-data.p.rapidapi.com/country';
@@ -47,5 +48,15 @@ export class DataComponent {
 			console.error( error ); 
 		}
 	}
+
+		// SHARING DATA TO PARENT
+		numbers: string = "Hello wolrd";
+
+		@Output() numbersEvent = new EventEmitter<string>();
+
+		public sendNumbers(){
+			this.numbersEvent.emit(this.numbers);
+		}
+
 }
 

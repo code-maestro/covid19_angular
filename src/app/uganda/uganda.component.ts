@@ -1,4 +1,4 @@
-import { Component, OnInit, Output,  } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-uganda',
@@ -19,6 +19,10 @@ export class UgandaComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  message: string = "";
 
+  receiveNumbers($event: any){
+    this.message = $event;
+  }
 
 }

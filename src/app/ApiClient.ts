@@ -3,13 +3,9 @@ import { AxiosInstance } from "axios";
 import { ErrorHandler } from "@angular/core";
 import { Injectable } from "@angular/core";
  
-// ----------------------------------------------------------------------------------- //
-// ----------------------------------------------------------------------------------- //
- 
 export interface Params {
 	[ key: string ]: any;
 }
- 
  
 export interface Headers {
 	[ key: string ]: any;

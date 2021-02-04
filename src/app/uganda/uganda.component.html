@@ -12,7 +12,8 @@
         <div class="card card-small" tabindex="0">
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-          <span class="real_numbers"> 28689 </span>
+          <span class="real_numbers"> {{ message }} </span>
+          <app-data  class="real_numbers" (numbersEvent)="receiveNumbers($event)"></app-data>
         </div>
       </div>
 
@@ -158,14 +159,15 @@
         <div class="card card-small" tabindex="0">
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-          <span class="real_numbers"> 28689 </span>
+            <app-data  class="real_numbers" (numbersEvent)="receiveNumbers($event)"></app-data>
+            <span class="real_numbers"> {{ message }} </span>
         </div>
       </div>
 
       <br>
       <mat-chip-list>
         <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
+          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: {{ message }}</span>
         </mat-chip>
         <mat-chip color="dark" selected>
           <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
