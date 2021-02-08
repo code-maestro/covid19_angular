@@ -24,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { DeathsComponent } from './deaths/deaths.component';
 
+//SERVICES
+import { ConfigService } from './config.service';
+
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
   authDomain: "mikaelprofile-184a4.firebaseapp.com",
@@ -57,7 +60,7 @@ var firebaseConfig = {
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 

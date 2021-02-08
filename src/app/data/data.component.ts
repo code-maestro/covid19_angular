@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter, OnInit} from '@angular/core';
 
 import { ApiClient } from "../ApiClient";
 
@@ -10,7 +10,7 @@ import { Post } from '../posts';
   styleUrls: ['./data.component.css']
 })
 
-export class DataComponent {
+export class DataComponent implements OnInit {
 
   readonly ROOT_URL = 'https://covid-19-data.p.rapidapi.com/country';
 

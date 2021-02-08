@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashComponent } from './dash/dash.component';
 import { HomeComponent } from './home/home.component';
 import { UgandaComponent } from './uganda/uganda.component';
-import { ShopComponent } from './shop/shop.component';
 import { MohSopsComponent } from './moh-sops/moh-sops.component';
 
 const routes: Routes = [
@@ -11,8 +10,7 @@ const routes: Routes = [
   {path: 'uganda', component:UgandaComponent},
   {path: 'dash', component:DashComponent},
   {path: 'home', component:HomeComponent},
-  {path: 'moh_sops', component:MohSopsComponent},
-  {path: 'shop', component:ShopComponent}
+  {path: 'moh_sops', component:MohSopsComponent}
 ];
 
 @NgModule({
@@ -26,6 +24,5 @@ export const routingComponents = [
   UgandaComponent,
   DashComponent,
   HomeComponent,
-  ShopComponent,
   MohSopsComponent
 ]

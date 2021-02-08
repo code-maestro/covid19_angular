@@ -1,221 +1,218 @@
-
 <div class="grid_cards">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>Comfirmed cases</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{confirmed}}
-      </p>
-
-      <div class="card-container">
-        <div class="card card-small" tabindex="0">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-          <span class="real_numbers"> {{ message }} </span>
-          <app-data  class="real_numbers" (numbersEvent)="receiveNumbers($event)"></app-data>
+    <mat-card class="example-card">
+      <ng-template [ngIf]="friends.length">
+      <mat-card-header>
+        <mat-card-title>Comfirmed cases </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+              <p class="real_numbers" *ngFor="let friend of friends">
+                {{friend.deaths}}
+              </p>    
+          </div>
         </div>
-      </div>
 
-      <mat-chip-list>
-        <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
-        </mat-chip>
-      </mat-chip-list>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">Kampala: {{friend.critical}}</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">Mbarara: {{friend.recovered}}</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+          </mat-chip>
+        </mat-chip-list>
 
-      <p>
-        sources: health.go.ug
-      </p>
+        <p>
+          sources: health.go.ug
+        </p>
+      </mat-card-content>
+    </ng-template>
+    </mat-card>
 
-    </mat-card-content>
-  </mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Recoveries </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{recoveries}}
+        </p>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title> Recoveries </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{recoveries}}
-      </p>
-
-      <div class="card-container">
-        <div class="card card-small" tabindex="0">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-          <span class="real_numbers"> 28689 </span>
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+            <span class="real_numbers"> 28689 </span>
+          </div>
         </div>
-      </div>
 
-      <mat-chip-list>
-        <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
-        </mat-chip>
-      </mat-chip-list>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+          </mat-chip>
+        </mat-chip-list>
 
-      <p>
-        sources: health.go.ug
-      </p>
+        <p>
+          sources: health.go.ug
+        </p>
 
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title> Samples Tested </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{samples}}
-      </p>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Samples Tested </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{samples}}
+        </p>
 
-      <div class="card-container">
-        <div class="card card-small" tabindex="0">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-          <span class="real_numbers"> 28689 </span>
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+            <span class="real_numbers"> 28689 </span>
+          </div>
         </div>
-      </div>
 
-      <mat-chip-list>
-        <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
-        </mat-chip>
-      </mat-chip-list>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+          </mat-chip>
+        </mat-chip-list>
 
-      <p>
-        sources: health.go.ug
-      </p>
+        <p>
+          sources: health.go.ug
+        </p>
 
-    </mat-card-content>
-  </mat-card>
-</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
-<div class="grid_cards">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title> Active cases </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{active}}
-      </p>
+  <div class="grid_cards">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Active cases </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{active}}
+        </p>
 
-      <div class="card-container">
-        <div class="card card-small" tabindex="0">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-          <span class="real_numbers"> 28689 </span>
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+            <span class="real_numbers"> 28689 </span>
+          </div>
         </div>
-      </div>
 
-      <mat-chip-list>
-        <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
-        </mat-chip>
-      </mat-chip-list>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+          </mat-chip>
+        </mat-chip-list>
 
-      <p>
-        sources: health.go.ug
-      </p>
+        <p>
+          sources: health.go.ug
+        </p>
 
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title> Deaths </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{deaths}}
-      </p>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Deaths </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{deaths}}
+        </p>
 
-      <div class="card-container">
-        <div class="card card-small" tabindex="0">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-            <span class="real_numbers"> {{ message }} </span>
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+              
+          </div>
         </div>
-      </div>
 
-      <br>
-      <mat-chip-list>
-        <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: {{ message }}</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
-        </mat-chip>
-      </mat-chip-list>
+        <br>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: </span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+          </mat-chip>
+        </mat-chip-list>
 
-      <p>
-        sources: health.go.ug
-      </p>
+        <p>
+          sources: health.go.ug
+        </p>
 
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title> Follow Up Contacts </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{followup}}
-      </p>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> Follow Up Contacts </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{followup}}
+        </p>
 
-      <div class="card-container">
-        <div class="card card-small" tabindex="0">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-          <span class="real_numbers"> 28689 </span>
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span class="real_numbers"> 28689 </span>
+          </div>
         </div>
-      </div>
-      <mat-chip-list>
-        <mat-chip color="accent" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
-        </mat-chip>
-        <mat-chip color="dark" selected>
-          <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
-        </mat-chip>
-      </mat-chip-list>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Kampala: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">Mbarara: 12009</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+          </mat-chip>
+        </mat-chip-list>
 
-      <p>
-        sources: health.go.ug
-      </p>
+        <p>
+          sources: health.go.ug
+        </p>
 
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
 </div>
