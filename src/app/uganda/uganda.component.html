@@ -5,6 +5,9 @@
         <mat-card-title>Comfirmed cases </mat-card-title>
       </mat-card-header>
       <mat-card-content>
+        <p>
+          {{confirmed}}
+        </p>
         <div class="card-container">
           <div class="card card-small" tabindex="0">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
@@ -23,7 +26,7 @@
             <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">Mbarara: {{friend.recovered}}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium">The Rest: 12009</span>
+            <span matBadge="+" matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">The Rest: {{friend.deaths}}</span>
           </mat-chip>
         </mat-chip-list>
 
@@ -192,7 +195,11 @@
 
         <div class="card-container">
           <div class="card card-small" tabindex="0">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+            <svg class="material-icons" 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="40" height="40" 
+                viewBox="0 0 40 40">
+                
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             <span class="real_numbers"> 28689 </span>
           </div>
