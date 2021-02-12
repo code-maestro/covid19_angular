@@ -12,11 +12,10 @@ import { Post } from '../posts';
 
 export class UgandaComponent implements OnInit {
 
-  
   deaths : String = "Total deaths from all over the country";
   active : String = "Total Active cases from all over the country";
   samples : String = "Total Samples taken from all over the country";
-  confirmed : String = "Total confirmed cases from all over the country";
+  confirmed_cases : String = "Total confirmed cases";
   recoveries : String = "Total recovered cases from all over the country";
   followup : String = "Total follow up contacts of the confirmed cases from all over the country";
 
@@ -26,9 +25,12 @@ export class UgandaComponent implements OnInit {
 	
   ngOnInit(): void {
     this.loadFriends();
+		this.loadData();
   }
 
   public friends: Post[];
+
+	public kenyaCases: Post[];
  
 	private apiClient: ApiClient;
  
@@ -37,6 +39,7 @@ export class UgandaComponent implements OnInit {
  
 		this.apiClient = apiClient;
 		this.friends = [];
+		this.kenyaCases = [];
 	}
 
 	public async loadFriends() : Promise<void> {
@@ -57,14 +60,22 @@ export class UgandaComponent implements OnInit {
 		}
 	}
 
-		// SHARING DATA TO PARENT
-		numbers: string = "Hello wolrd";
-
-		@Output() numbersEvent = new EventEmitter<string>();
-
-		public sendNumbers(){
-			this.numbersEvent.emit(this.numbers);
+	public async loadData() : Promise<void> {
+		try {
+			this.kenyaCases = await this.apiClient.get<Post[]>({
+				url: 'https://covid-19-data.p.rapidapi.com/country',
+				params: {
+          name: 'kenya' 
+        },
+        headers: {
+          'x-rapidapi-key': 'cc23854be3msh80f7d131de623c6p14400djsnff7e1752faa6',
+          'x-rapidapi-host': 'covid-19-data.p.rapidapi.com'
+        }
+			});
+		} catch ( error ) {
+			console.error( error ); 
 		}
+	}
 
 }
 
