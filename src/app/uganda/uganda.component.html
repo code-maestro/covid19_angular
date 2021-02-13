@@ -1,6 +1,6 @@
 <div class="grid_cards">
 
-  <!-- UGANDA CONFIRMED CASES -->
+  <!--  WORLD CASES -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> GLOBAL CASES </mat-card-title>
@@ -32,19 +32,19 @@
         </mat-chip-list>
 
         <p>
-          sources: health.go.ug
+          RAPID API
         </p>
       </mat-card-content>
     </mat-card>
 
-<!-- UGANDA CRITICAL CASES -->
+<!-- UGANDA CASES -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> UGANDA </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{recoveries}}
+          {{confirmed_cases}}
         </p>
         <div class="card-container">
           <div class="card card-small" tabindex="0">
@@ -71,14 +71,14 @@
       </mat-card-content>
     </mat-card>
 
-    <!-- UGANDA CRITICAL CASES -->
+    <!-- KENYA CASES -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> KENYA </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{active}}
+          {{confirmed_cases}}
         </p>
 
         <div class="card-container">
@@ -100,22 +100,17 @@
             <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
-
-        <p>
-          sources: health.go.ug
-        </p>
-
       </mat-card-content>
     </mat-card>
 
-    <!-- UGANDA DEATHS -->
+    <!-- TANZANIA CASES -->
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title> Critical cases </mat-card-title>
+        <mat-card-title> TANZANIA </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{active}}
+          {{confirmed_cases}}
         </p>
 
         <div class="card-container">
@@ -137,23 +132,52 @@
             <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
-
-        <p>
-          sources: health.go.ug
-        </p>
-
       </mat-card-content>
     </mat-card>
   </div>
 
+
   <div class="grid_cards">
+
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title> Deaths </mat-card-title>
+        <mat-card-title> RWANDA </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{deaths}}
+          {{confirmed_cases}}
+        </p>
+
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+              
+          </div>
+        </div>
+
+        <br>
+        <mat-chip-list>
+          <mat-chip class="foreeal">
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let kenyaCase of kenyaCases">CRITICAL: {{ kenyaCase.critical }}</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+          </mat-chip>
+          <mat-chip color="accent" selected>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> BURUNDI </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{confirmed_cases}}
         </p>
 
         <div class="card-container">
@@ -177,25 +201,31 @@
           </mat-chip>
         </mat-chip-list>
 
-        <p>
-          sources: health.go.ug
-        </p>
-
       </mat-card-content>
     </mat-card>
 
+    
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title> UGANDA </mat-card-title>
+        <mat-card-title> SOUTH SUDAN </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{followup}}
+          {{confirmed_cases}}
         </p>
 
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+              
+          </div>
+        </div>
+
+        <br>
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let friend of friends">CRITICAL: {{ friend.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let kenyaCase of kenyaCases">CRITICAL: {{ kenyaCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
             <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
@@ -205,10 +235,41 @@
           </mat-chip>
         </mat-chip-list>
 
+      </mat-card-content>
+    </mat-card>
+
+    
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> SOMALIA </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
         <p>
-          sources: health.go.ug
+          {{confirmed_cases}}
         </p>
+
+        <div class="card-container">
+          <div class="card card-small" tabindex="0">
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+              
+          </div>
+        </div>
+
+        <br>
+        <mat-chip-list>
+          <mat-chip class="foreeal">
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let kenyaCase of kenyaCases">CRITICAL: {{ kenyaCase.critical }}</span>
+          </mat-chip>
+          <mat-chip color="dark" selected>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+          </mat-chip>
+          <mat-chip color="accent" selected>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+          </mat-chip>
+        </mat-chip-list>
 
       </mat-card-content>
     </mat-card>
+
   </div>

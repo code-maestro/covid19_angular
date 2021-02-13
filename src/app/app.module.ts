@@ -15,14 +15,12 @@ import { MyMaterialModule } from './material';
 
 //components
 import { AppComponent } from './app.component';
-import { DataComponent } from './data/data.component';
 import { BodyComponent } from './body/body.component';
 import { NavComponent } from './nav/nav.component';
 import { DialogComponent } from './dialog/dialog.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { DeathsComponent } from './deaths/deaths.component';
 
 //SERVICES
 import { ConfigService } from './config.service';
@@ -44,9 +42,7 @@ var firebaseConfig = {
     BodyComponent,
     NavComponent,
     routingComponents,
-    DataComponent,
-    DialogComponent,
-    DeathsComponent
+    DialogComponent
   ],
   imports: [
     BrowserModule,

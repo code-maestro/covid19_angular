@@ -11,13 +11,8 @@ import { Post } from '../posts';
 })
 
 export class UgandaComponent implements OnInit {
-
-  deaths : String = "Total deaths from all over the country";
-  active : String = "Total Active cases from all over the country";
-  samples : String = "Total Samples taken from all over the country";
+	
   confirmed_cases : String = "Total confirmed cases";
-  recoveries : String = "Total recovered cases from all over the country";
-  followup : String = "Total follow up contacts of the confirmed cases from all over the country";
 
   readonly ROOT_URL = 'https://covid-19-data.p.rapidapi.com/country';
 
