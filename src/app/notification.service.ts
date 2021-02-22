@@ -8,8 +8,8 @@ export class NotificationService {
 
   constructor(private snackBar: MatSnackBar) { }
 
-  showNotification(){
-    this.snackBar.open('hi from ts', 'NEXT', {
+  showNotification(snack_text: string){
+    this.snackBar.open(snack_text, 'NEXT', {
       duration: 5000,
       horizontalPosition: 'center',
       verticalPosition: 'bottom'

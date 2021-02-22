@@ -27,9 +27,8 @@ export class DialogComponent implements OnInit {
 
   }
 
-  // Supposed to lau
   clicked(){
-    this.notify.showNotification();
+    this.notify.showNotification("mikael from ts");
     console.log("mikael from ts");
   }
 
