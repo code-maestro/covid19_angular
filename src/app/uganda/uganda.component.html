@@ -7,7 +7,7 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{confirmed_cases}}
+          🌍 {{confirmed_cases}}
         </p>
         <div class="card-container">
           <div class="card card-small" tabindex="0">
@@ -21,13 +21,13 @@
 
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let worldCase of worldCases" >CRITICAL: {{ worldCase.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let worldCase of worldCases"> CRITICAL: {{ worldCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let worldCase of worldCases">DEATHS: {{ worldCase.deaths }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let worldCase of worldCases"> DEATHS: {{ worldCase.deaths }}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let worldCase of worldCases">RECOVERED: {{ worldCase.recovered }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let worldCase of worldCases"> RECOVERED: {{ worldCase.recovered }}</span>
           </mat-chip>
         </mat-chip-list>
 
@@ -44,7 +44,7 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{confirmed_cases}}
+          👨‍👨‍👧‍👦 {{confirmed_cases}} 
         </p>
         <div class="card-container">
           <div class="card card-small" tabindex="0">
@@ -58,13 +58,13 @@
 
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let ugCase of ugCases">CRITICAL: {{ ugCase.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let ugCase of ugCases"> 🤒 CRITICAL: {{ ugCase.critical }} </span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ugCase of ugCases">DEATHS: {{ugCase.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ugCase of ugCases"> ⚰ DEATHS: {{ugCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ugCase of ugCases">RECOVERED: {{ugCase.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ugCase of ugCases"> ☺ RECOVERED: {{ugCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
 
@@ -78,7 +78,7 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{confirmed_cases}}
+          👨‍👨‍👧‍👦 {{confirmed_cases}} 
         </p>
 
         <div class="card-container">
@@ -114,7 +114,7 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{confirmed_cases}}
+          👨‍👨‍👧‍👦 {{confirmed_cases}} 
         </p>
 
         <div class="card-container">
@@ -297,5 +297,4 @@
 
       </mat-card-content>
     </mat-card>
-
   </div>
