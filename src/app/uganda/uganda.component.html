@@ -13,21 +13,21 @@
           <div class="card card-small" tabindex="0">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-              <p class="real_numbers" *ngFor="let friend of friends">
-                {{friend.confirmed}}
+              <p class="real_numbers" *ngFor="let worldCase of worldCases">
+                {{worldCase.confirmed}}
               </p>    
           </div>
         </div>
 
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let friend of friends">CRITICAL: {{ friend.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let worldCase of worldCases" >CRITICAL: {{ worldCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let worldCase of worldCases">DEATHS: {{ worldCase.deaths }}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let worldCase of worldCases">RECOVERED: {{ worldCase.recovered }}</span>
           </mat-chip>
         </mat-chip-list>
 
@@ -50,21 +50,21 @@
           <div class="card card-small" tabindex="0">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-              <p class="real_numbers" *ngFor="let friend of friends">
-                {{friend.recovered}}
+              <p class="real_numbers" *ngFor="let ugCase of ugCases">
+                {{ugCase.confirmed}}
               </p>    
           </div>
         </div>
 
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let friend of friends">CRITICAL: {{ friend.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let ugCase of ugCases">CRITICAL: {{ ugCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ugCase of ugCases">DEATHS: {{ugCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ugCase of ugCases">RECOVERED: {{ugCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
 
@@ -85,19 +85,23 @@
           <div class="card card-small" tabindex="0">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-            <span class="real_numbers"> 28689 </span>
+
+            <span class="real_numbers" *ngFor="let keCase of keCases">
+               {{keCase.confirmed}}
+            </span>
+
           </div>
         </div>
 
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let friend of friends">CRITICAL: {{ friend.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let keCase of keCases">CRITICAL: {{keCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let keCase of keCases">DEATHS: {{keCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let keCase of keCases">RECOVERED: {{keCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
       </mat-card-content>
@@ -117,19 +121,23 @@
           <div class="card card-small" tabindex="0">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
-            <span class="real_numbers"> 28689 </span>
+            
+              <span class="real_numbers" *ngFor="let tzCase of tzCases">
+               {{tzCase.confirmed}} 
+              </span>
+
           </div>
         </div>
 
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let friend of friends">CRITICAL: {{ friend.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let tzCase of tzCases">CRITICAL: {{ tzCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let tzCase of tzCases">DEATHS: {{tzCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let tzCase of tzCases">RECOVERED: {{tzCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
       </mat-card-content>
@@ -139,6 +147,7 @@
 
   <div class="grid_cards">
 
+  <!-- RWANDAN CASES -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> RWANDA </mat-card-title>
@@ -153,24 +162,29 @@
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
               
+              <span class="real_numbers" *ngFor="let rwCase of rwCases">
+                {{rwCase.confirmed}} 
+               </span>
+ 
           </div>
         </div>
 
         <br>
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let keCase of keCases">CRITICAL: {{ keCase.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let rwCase of rwCases">CRITICAL: {{ rwCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let rwCase of rwCases">DEATHS: {{rwCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let rwCase of rwCases">RECOVERED: {{rwCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
       </mat-card-content>
     </mat-card>
 
+    <!-- BURUNDI CASES -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> BURUNDI </mat-card-title>
@@ -185,26 +199,30 @@
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
               
+              <span class="real_numbers" *ngFor="let buCase of buCases">
+                {{buCase.confirmed}} 
+               </span>
+              
           </div>
         </div>
 
         <br>
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let keCase of keCases">CRITICAL: {{ keCase.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let buCase of buCases">CRITICAL: {{ buCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let buCase of buCases">DEATHS: {{buCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let buCase of buCases">RECOVERED: {{buCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
 
       </mat-card-content>
     </mat-card>
 
-    
+    <!-- SOUTH SUDAN CASES  -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> SOUTH SUDAN </mat-card-title>
@@ -218,6 +236,10 @@
           <div class="card card-small" tabindex="0">
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+              <span class="real_numbers" *ngFor="let ssCase of ssCases">
+                {{ssCase.confirmed}} 
+               </span>
               
           </div>
         </div>
@@ -225,20 +247,20 @@
         <br>
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let keCase of keCases">CRITICAL: {{ keCase.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let ssCase of ssCases"> CRITICAL: {{ ssCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ssCase of ssCases"> DEATHS: {{ssCase.deaths}}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let ssCase of ssCases"> RECOVERED: {{ssCase.recovered}}</span>
           </mat-chip>
         </mat-chip-list>
 
       </mat-card-content>
     </mat-card>
 
-    
+    <!-- SOMALIA CASES -->
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title> SOMALIA </mat-card-title>
@@ -253,19 +275,23 @@
             <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
               
+              <span class="real_numbers" *ngFor="let soCase of soCases">
+                {{soCase.confirmed}} 
+               </span>
+              
           </div>
         </div>
 
         <br>
         <mat-chip-list>
           <mat-chip class="foreeal">
-            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let keCase of keCases">CRITICAL: {{ keCase.critical }}</span>
+            <span matBadgeOverlap="false" matBadgeSize="large" *ngFor="let soCase of soCases"> CRITICAL: {{ soCase.critical }}</span>
           </mat-chip>
           <mat-chip color="dark" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">DEATHS: {{friend.deaths}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let soCase of soCases"> DEATHS: {{ soCase.deaths }}</span>
           </mat-chip>
           <mat-chip color="accent" selected>
-            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let friend of friends">RECOVERED: {{friend.recovered}}</span>
+            <span matBadgeOverlap="false" matBadgeSize="medium" *ngFor="let soCase of soCases"> RECOVERED: {{ soCase.recovered }}</span>
           </mat-chip>
         </mat-chip-list>
 
