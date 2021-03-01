@@ -14,6 +14,8 @@ export class UgandaComponent implements OnInit {
 	
   confirmed_cases : String = "Total confirmed cases";
 
+	readonly WORLD_ROOT_URL = '';
+
   readonly ROOT_URL = 'https://covid-19-data.p.rapidapi.com/country';
 	readonly API_KEY = 'cc23854be3msh80f7d131de623c6p14400djsnff7e1752faa6';
 	readonly API_HOST = 'covid-19-data.p.rapidapi.com';
@@ -21,7 +23,8 @@ export class UgandaComponent implements OnInit {
 	posts: any;
 	
   ngOnInit(): void {
-    this.loadFriends();
+		this.loadWorldCases();
+    this.loadUgCases();
 		this.loadKeData();
 		this.loadTzData();
 		this.loadRwData();
@@ -30,7 +33,8 @@ export class UgandaComponent implements OnInit {
 		this.loadSoData();
   }
 
-  public friends: Post[];
+	public worldCases: Post[];
+  public ugCases: Post[];
 	public keCases: Post[];
 	public tzCases: Post[];
 	public rwCases: Post[];
@@ -45,7 +49,8 @@ export class UgandaComponent implements OnInit {
  
 		this.apiClient = apiClient;
 
-		this.friends = [];
+		this.worldCases = [];
+		this.ugCases = [];
 		this.keCases = [];
 		this.tzCases = [];
 		this.rwCases = [];
@@ -55,10 +60,30 @@ export class UgandaComponent implements OnInit {
 	
 	}
 
-	public async loadFriends() : Promise<void> {
+		// FUNCTION TO RETRIEVE UGANDAN DATA/STATS
+		public async loadWorldCases() : Promise<void> {
+ 
+			try {
+				this.ugCases = await this.apiClient.get<Post[]>({
+					url: this.ROOT_URL,
+					params: {
+						name: 'uganda' 
+					},
+					headers: {
+						'x-rapidapi-key': this.API_KEY,
+						'x-rapidapi-host': this.API_HOST
+					}
+				});
+			} catch ( error ) {
+				console.error( error ); 
+			}
+		}
+
+	// FUNCTION TO RETRIEVE UGANDAN DATA/STATS
+	public async loadUgCases() : Promise<void> {
  
 		try {
-			this.friends = await this.apiClient.get<Post[]>({
+			this.ugCases = await this.apiClient.get<Post[]>({
 				url: this.ROOT_URL,
 				params: {
           name: 'uganda' 
@@ -73,7 +98,7 @@ export class UgandaComponent implements OnInit {
 		}
 	}
 
-	// FUNCTION TO RETRIEVE DATA FOR KENYA
+	// FUNCTION TO RETRIEVE KENYAN DATA/STATS
 	public async loadKeData() : Promise<void> {
 		try {
 			this.keCases = await this.apiClient.get<Post[]>({
@@ -91,7 +116,7 @@ export class UgandaComponent implements OnInit {
 		}
 	}
 
-	// FUNCTION TO RETRIEVE DATA FOR TANZANIA
+	// FUNCTION TO RETRIEVE TANZANIAN DATA/STATS
 	public async loadTzData() : Promise<void> {
 		try {
 			this.keCases = await this.apiClient.get<Post[]>({
