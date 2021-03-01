@@ -48,7 +48,6 @@ mat-chip{
   margin-right: 0;
 }
 
-
 svg.material-icons {
   height: 40px;
   color: antiquewhite;
@@ -58,7 +57,6 @@ svg.material-icons {
 .card-container .card:not(.highlight-card):hover .material-icons path {
   fill: rgb(251, 251, 251);
 }
-
 
 .card.card-small {
   height: 16px;
