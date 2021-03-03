@@ -24,6 +24,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //SERVICES
 import { ConfigService } from './config.service';
+import { ShopComponent } from './shop/shop.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCSCFfZkIGKDs6StehcpNEaHd7LvruGJDU",
@@ -42,7 +43,8 @@ var firebaseConfig = {
     BodyComponent,
     NavComponent,
     routingComponents,
-    DialogComponent
+    DialogComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
