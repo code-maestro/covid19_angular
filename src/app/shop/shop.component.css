@@ -1,6 +1,10 @@
 h1{
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1em;
+}
+
+.image{
+  padding: 1em;
 }
 
 .basic-grid{
@@ -24,12 +28,17 @@ h1{
     filter: hue-rotate(0deg);
   }
 }
+
 .card{
   background-color: rgb(15, 14, 14);
   border-radius: 1em;
   text-align: center;
   animation: cardEntrance 500ms ease-out;
   animation-fill-mode: backwards;
+}
+
+.card p{
+  margin-top: 1em;
 }
 
 /* ANIMATING THE CARDS  */
