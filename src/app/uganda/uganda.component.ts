@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import { ApiClient } from "../ApiClient";
 
@@ -23,7 +23,7 @@ export class UgandaComponent implements OnInit {
 	posts: any;
 	
   ngOnInit(): void {
-		this.loadWorldCases();
+		//this.loadWorldCases();
     this.loadUgCases();
 		this.loadKeData();
 		this.loadTzData();
@@ -119,7 +119,7 @@ export class UgandaComponent implements OnInit {
 	// FUNCTION TO RETRIEVE TANZANIAN DATA/STATS
 	public async loadTzData() : Promise<void> {
 		try {
-			this.keCases = await this.apiClient.get<Post[]>({
+			this.tzCases = await this.apiClient.get<Post[]>({
 				url: this.ROOT_URL,
 				params: {
           name: 'tanzania' 
@@ -137,7 +137,7 @@ export class UgandaComponent implements OnInit {
 	// FUNCTION TO RETRIEVE RWANDAN DATA/STATS
 	public async loadRwData() : Promise<void> {
 		try {
-			this.keCases = await this.apiClient.get<Post[]>({
+			this.rwCases = await this.apiClient.get<Post[]>({
 				url: this.ROOT_URL,
 				params: {
 					name: 'rwanda' 
@@ -155,7 +155,7 @@ export class UgandaComponent implements OnInit {
 	// FUNCTION TO RETRIEVE BURUNDI DATA/STATS
 	public async loadBuData() : Promise<void> {
 		try {
-			this.keCases = await this.apiClient.get<Post[]>({
+			this.buCases = await this.apiClient.get<Post[]>({
 				url: this.ROOT_URL,
 				params: {
 					name: 'burundi' 
@@ -191,7 +191,7 @@ export class UgandaComponent implements OnInit {
 	// FUNCTION TO RETRIEVE SOMALIA DATA/STATS
 	public async loadSoData() : Promise<void> {
 		try {
-			this.keCases = await this.apiClient.get<Post[]>({
+			this.soCases = await this.apiClient.get<Post[]>({
 				url: this.ROOT_URL,
 				params: {
 					name: 'somalia' 
